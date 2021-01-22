@@ -5,6 +5,7 @@
 ### Breaking Changes
 
 - Replaced `CommunicationUser` with `CommunicationUserIdentifier`.
+- `CommunicationIdentityClient` method `revokeTokens` no longer accepts `tokensValidFrom` as an argument.
 
 ### Key bug fixes
 
@@ -14,6 +15,7 @@
 ### Added
 
 - `CommunicationIdentityClient` added a constructor that supports `TokenCredential`.
+- `CommunicationIdentityClient` added a new method `createUserWithToken`.
 
 ## 1.0.0-beta.3 (2020-11-16)
 

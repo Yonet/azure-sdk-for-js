@@ -1,25 +1,25 @@
 let nock = require("nock");
 
-module.exports.hash = "791f5b78ba1812d9905dd61f264e98f5";
+module.exports.hash = "91da5c774930c99e1394770f0f7c5842";
 
 module.exports.testInfo = { uniqueName: {}, newDate: {} };
 
 nock("https://endpoint", { encodedQueryParams: true })
-  .patch("/identities/sanitized", { tokensValidFrom: "2020-10-10T00:00:00.000Z" })
+  .post("/identities/sanitized/:revokeAccessTokens")
   .query(true)
   .reply(204, "", [
     "MS-CV",
-    "ApT8zxbjtUGt+F+Jr9ax7Q.0",
+    "KJAASrhXnUyvIG6SOjGlFQ.0",
     "Strict-Transport-Security",
     "max-age=2592000",
     "x-ms-client-request-id",
     "sanitized",
     "api-supported-versions",
-    "2020-01-15-preview3, 2020-07-20-preview1, 2020-07-20-preview2",
+    "2020-07-20-preview2, 2021-03-07",
     "X-Processing-Time",
-    "565ms",
+    "645ms",
     "X-Azure-Ref",
-    "0sYy4XwAAAADl81Mb4GSoTYri/ZOYJSGTWVZSMzBFREdFMDMwNgA5ZmM3YjUxOS1hOGNjLTRmODktOTM1ZS1jOTE0OGFlMDllODE=",
+    "0W+EJYAAAAAC5xPMAGBwBRbatPRn5S9LiV1NURURHRTA4MTcAOWZjN2I1MTktYThjYy00Zjg5LTkzNWUtYzkxNDhhZTA5ZTgx",
     "Date",
-    "Sat, 21 Nov 2020 03:42:41 GMT"
+    "Thu, 21 Jan 2021 20:17:31 GMT"
   ]);
